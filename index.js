@@ -24,6 +24,14 @@ app.get("/documentary/:id", (req, res) => {
   res.render(`documentary-singles/documentary-single-${id}`, { path: req.path });
 });
 
+app.get("/animals", (req,res) => {
+  res.render("animals", { path: req.path });
+});
+app.get("/animals/:id", (req, res) => {
+  const id = req.params.id;
+  res.render(`animals-singles/animals-single-${id}`, { path: req.path });
+});
+
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
