@@ -32,6 +32,46 @@ app.get("/animals/:id", (req, res) => {
   res.render(`animals-singles/animals-single-${id}`, { path: req.path });
 });
 
+app.get("/music", (req,res) => {
+  res.render("music", { path: req.path });
+});
+app.get("/music/:id", (req, res) => {
+  const id = req.params.id;
+  res.render(`music-singles/music-single-${id}`, { path: req.path });
+});
+
+app.get("/awareness", (req,res) => {
+  res.render("awareness", { path: req.path });
+});
+app.get("/awareness/:id", (req, res) => {
+  const id = req.params.id;
+  res.render(`awareness-singles/awareness-single-${id}`, { path: req.path });
+});
+
+app.get("/commercial", (req,res) => {
+  res.render("commercial", { path: req.path });
+});
+app.get("/commercial/:id", (req, res) => {
+  const id = req.params.id;
+  res.render(`commercial-singles/commercial-single-${id}`, { path: req.path });
+});
+
+app.get("/personal", (req,res) => {
+  res.render("personal", { path: req.path });
+});
+app.get("/personal/:id", (req, res) => {
+  const id = req.params.id;
+  res.render(`personal-singles/personal-single-${id}`, { path: req.path });
+});
+
+app.get("/others", (req,res) => {
+  res.render("others", { path: req.path });
+});
+app.get("/others/:id", (req, res) => {
+  const id = req.params.id;
+  res.render(`others-singles/others-single-${id}`, { path: req.path });
+});
+
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
