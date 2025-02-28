@@ -7,13 +7,17 @@
             <nav>
                 
                 <div class="sub-head">
-                    <ul>
+                    <ul id="sidemenu">
                         <% if (typeof path !== 'undefined' && path !== '/') { %>
                             <li><a href="/">HOME</a></li>
                         <% } %>
                         <li><a href="/about">ABOUT</a></li>
                         <li><a href="/contact">CONTACT</a></li>
+
+                        <i class="fa-solid fa-xmark resp" onclick="closemenu()"></i>
                     </ul>
+                    <i class="fa-solid fa-bars resp" onclick="openmenu()"></i>
+
 
                 </div>
 
@@ -49,9 +53,7 @@
                             </div>
                         </li>
                         <li><a href="/images/venu_resume.pdf" target="_blank">RESUME</a></li>
-                        
-                    </ul>
-
+                    </ul>    
                 </div>
                 
             </nav>

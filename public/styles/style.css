@@ -949,6 +949,10 @@ footer p{
 
 /* header responsive design */
 
+nav .resp{
+    display: none;
+}
+
 
 @media screen and (max-width: 768px) {
     nav {
@@ -964,6 +968,47 @@ footer p{
         font-size: 24px;
         margin-top: -30px;
     }
+
+    nav .resp{
+        display: block;
+        font-size: 20px;
+    }
+
+    nav .sub-head ul{
+        background: gray;
+        position: fixed;
+        top: 0;
+        left: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+    }
+
+    nav .sub-head ul li{
+        display: block;
+        margin: 25px;
+    }
+
+    .resp{
+        cursor: pointer;
+    }
+
+    nav .sub-head ul .resp{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    .head ul{
+        margin-left: 170px;
+    }
+    .head{
+        margin-bottom: -40px;
+    }
+    
+
     
 }
 

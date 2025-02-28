@@ -8,6 +8,20 @@ document.addEventListener('DOMContentLoaded', function () {
     const leftArrow = document.querySelector('.left-arrow');
     const rightArrow = document.querySelector('.right-arrow');
 
+    var sidemenu = document.getElementById("sidemenu");
+    const menuIcon = document.querySelector('.fa-bars');
+    const closeIcon = document.querySelector('.fa-xmark');
+    menuIcon.addEventListener('click', openmenu);
+    closeIcon.addEventListener('click', closemenu);
+    function openmenu(){
+        sidemenu.style.left = "0";
+        document.body.style.overflow = "hidden";
+    }
+    function closemenu(){
+        sidemenu.style.left = "-200px";
+        document.body.style.overflow = "auto";
+    }
+
     let currentVideoIndex = 0;
     const videos = [previewVideo, previewVideo2];
     const fullVideos = ['images/video2.mp4', 'images/video-sound-2.mp4'];
@@ -71,3 +85,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
     
 });
+
