@@ -18,9 +18,20 @@ document.addEventListener('DOMContentLoaded', function () {
         document.body.style.overflow = "hidden";
     }
     function closemenu(){
-        sidemenu.style.left = "-200px";
+        sidemenu.style.left = "-130px";
         document.body.style.overflow = "auto";
     }
+
+    // Close sidebar when clicking outside
+    document.addEventListener('click', function(event) {
+        const isClickInsideSidebar = sidemenu.contains(event.target);
+        const isClickOnMenuIcon = menuIcon.contains(event.target);
+        const isClickOnCloseIcon = closeIcon.contains(event.target);
+        
+        if (!isClickInsideSidebar && !isClickOnMenuIcon && !isClickOnCloseIcon && sidemenu.style.left === "0px") {
+            closemenu();
+        }
+    });
 
     let currentVideoIndex = 0;
     const videos = [previewVideo, previewVideo2];

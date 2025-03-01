@@ -120,6 +120,11 @@ header{
     .documentary-grid {
         grid-template-columns: 1fr;
     }
+
+    #documentary {
+        padding: 20px 20px;
+        background-color: #fff;
+    }
 }
 
 /* Documentary Single Page Styles */
@@ -303,6 +308,16 @@ header{
     
     .animals-image-container {
         aspect-ratio: 16/9;
+    }
+
+    .animals-single {
+        padding: 30px 30px;
+        background-color: #fff;
+    }
+
+    .animals-title{
+        margin-bottom: 10px;
+        font-size: 20px;
     }
 }
 
@@ -975,11 +990,11 @@ nav .resp{
     }
 
     nav .sub-head ul{
-        background: gray;
+        background: rgb(237, 237, 237);
         position: fixed;
         top: 0;
-        left: -200px;
-        width: 200px;
+        left: -130px;
+        width: 130px;
         height: 100vh;
         padding-top: 50px;
         z-index: 2;
@@ -987,7 +1002,7 @@ nav .resp{
 
     nav .sub-head ul li{
         display: block;
-        margin: 25px;
+        margin: 20px;
     }
 
     .resp{
